@@ -1,17 +1,32 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+
 import PokedexStyle from './styles';
 
 import LeftPanel from '../LeftPanel';
 import RightPanel from '../RightPanel';
 import Divider from '../Divider';
 
-const Pokedex = () => {
+const Pokedex = (
+    pokemon,
+    pokemonData,
+    pokemonType,
+) => {
+
     return (
-        <PokedexStyle>
-            <LeftPanel />
-            <Divider />
-            <RightPanel />
-        </PokedexStyle>
+        <p>{pokemonType}</p>
+        // <PokedexStyle>
+        //     <LeftPanel 
+        //         pokemon={pokemon}
+        //         pokemonData={pokemonData}
+        //         pokemonType={pokemonType}
+        //     />
+        //     <Divider />
+        //     <RightPanel 
+        //         pokemon={pokemon}
+        //         pokemonData={pokemonData}
+        //         pokemonType={pokemonType}
+        //     />
+        // </PokedexStyle>
     )
 };
 

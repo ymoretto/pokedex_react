@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { 
     Container,
@@ -12,7 +12,11 @@ import PokeButton from '../PokeButton';
 
 import LeftPanelStyle from './styles';
 
-const LeftPanel = () => {
+const LeftPanel = (
+    pokemon,
+    pokemonData,
+    pokemonType,
+) => {
     return (
         <LeftPanelStyle>
             <Container>
