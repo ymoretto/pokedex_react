@@ -1,10 +1,11 @@
 import React from 'react';
 import ImageBoxStyle from './styles';
 
-const ImageBox = () => {
+const ImageBox = ({pokemonData}) => {
+
     return (
         <ImageBoxStyle>
-            <p>img do pokemon</p>
+            <img src="" alt=""/>
         </ImageBoxStyle>
     )
 };

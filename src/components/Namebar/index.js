@@ -2,10 +2,10 @@ import React from 'react';
 
 import NamebarStyle from './styles';
 
-const Namebar = () => {
+const Namebar = ({pokemonData}) => {
     return (
         <NamebarStyle>
-            <h1>Bulbassauro nº 1</h1>
+            <h1>{pokemonData.name} {pokemonData.id}</h1>
         </NamebarStyle>
     )
 };
