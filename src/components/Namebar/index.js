@@ -2,11 +2,26 @@ import React from 'react';
 
 import NamebarStyle from './styles';
 
+import { 
+    Container
+    } from 'react-bootstrap';
+
 const Namebar = ({pokemonData}) => {
     return (
-        <NamebarStyle>
-            <h1>{pokemonData.name} {pokemonData.id}</h1>
-        </NamebarStyle>
+        <Container>
+            <NamebarStyle>
+                {(pokemonData != '')
+                    ? <div>
+                        <h1>{pokemonData.name.toUpperCase()}</h1>
+                        <h3>nº{pokemonData.id}</h3>
+                    </div>
+                    : <div>
+                        <h2>Waiting for Pokémon Data</h2>
+                    </div>
+                }
+                
+            </NamebarStyle>
+        </Container>
     )
 };
 

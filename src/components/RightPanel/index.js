@@ -6,23 +6,20 @@ import {
     Row,
     Col
     } from 'react-bootstrap';
-import InputSearch from '../InputSearch';
 import Description from '../Description';
 import TypeBadge from '../TypeBadge';
 import StatsBox from '../StatsBox';
 
-const RightPanel = () => {
+const RightPanel = (pokemon, pokemonData, pokemonType) => {
     return (
         <RightPanelStyle>
             <Container> 
                 <Row>
                     <Col>
-                        <InputSearch />
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <Description />
+                        <Description 
+                            pokemon={pokemon}
+                            pokemonData={pokemonData}
+                        />
                     </Col>
                 </Row>
                 <Row>

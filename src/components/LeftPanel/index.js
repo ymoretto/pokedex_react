@@ -8,15 +8,14 @@ import {
 import RoundButton from '../RoundButton';
 import Namebar from '../Namebar';
 import ImageBox from '../ImageBox';
-import PokeButton from '../PokeButton';
 
 import LeftPanelStyle from './styles';
 
-const LeftPanel = ({pokemonData, pokemonType}) => {
+const LeftPanel = ({pokemonData}) => {
     return (
         <LeftPanelStyle>
             <Container>
-                <Row>
+                <Row className="row-buttons">
                     <RoundButton 
                         color={'#3B4CCA'}
                         size={'50px'}
@@ -39,21 +38,10 @@ const LeftPanel = ({pokemonData, pokemonType}) => {
                         pokemonData={pokemonData}
                     />
                 </Row>
-                <Row>
+                <Row className="mb-2 mt-2">
                     <ImageBox 
                         pokemonData={pokemonData}
                     />
-                </Row>
-                <Row>
-                    <Col>
-                        <PokeButton />
-                    </Col>
-                    <Col>
-                        <PokeButton />
-                    </Col>
-                    <Col>
-                        <PokeButton />
-                    </Col>
                 </Row>
             </Container>
         </LeftPanelStyle>

@@ -12,15 +12,13 @@ const Pokedex = ({pokemon, pokemonData, pokemonType}) => {
         
          <PokedexStyle>
              <LeftPanel
-                pokemon={pokemon}
                 pokemonData={pokemonData}
-                pokemonType={pokemonType}
              />
              <Divider />
              <RightPanel 
-                 pokemon={pokemon}
-                 pokemonData={pokemonData}
-                 pokemonType={pokemonType}
+                pokemon={pokemon}
+                pokemonData={pokemonData}
+                pokemonType={pokemonType}
              />
          </PokedexStyle>
     )
