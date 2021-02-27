@@ -11,7 +11,7 @@ import {
 
 const ImageBox = ({pokemonData, pokemonFront, pokemonBack, pokemonShiny}) => {
 
-    const [pokeImg, setPokeImg] = useState([pokemonFront]);
+    const [pokeImg, setPokeImg] = useState([pokemonData.sprites.front_default]);
 
 
     const handleClickShiny = () => {
@@ -32,11 +32,11 @@ const ImageBox = ({pokemonData, pokemonFront, pokemonBack, pokemonShiny}) => {
             <Row>
                 <Col>
                     <ImageBoxStyle>
-                        {pokemonData == '' 
+                        {pokemonFront == '' 
                             ? <div>
                                 <img src={pokeball} alt="pokeball"/>
                             </div>
-                            : <img src={[pokeImg]} alt="pokemon"/>  
+                            : <img src={pokeImg} alt="pokemon"/>  
                         }
                     </ImageBoxStyle>
                 </Col>
