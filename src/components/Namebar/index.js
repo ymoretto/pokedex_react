@@ -16,7 +16,7 @@ const Namebar = ({pokemonData}) => {
                         <h3>nº{pokemonData.id}</h3>
                     </div>
                     : <div>
-                        <h2>Waiting for Pokémon Data</h2>
+                        <h2>Waiting for Data</h2>
                     </div>
                 }
                 

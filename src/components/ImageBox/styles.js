@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-const ImageBoxStyle = styled.div`
+import "@fontsource/dotgothic16"
+
+export const ImageBoxStyle = styled.div`
     background: lightyellow;
     width: 100%;
     height: 300px;
@@ -8,6 +10,7 @@ const ImageBoxStyle = styled.div`
     justify-content: center;
     align-items: center;
     border: 1px black solid;
+    margin-bottom: 5px;
     img {
         width: 50%;
     }
@@ -19,4 +22,24 @@ const ImageBoxStyle = styled.div`
     }
 `;
 
-export default ImageBoxStyle;
+export const ButtonStyle = styled.button`
+    font-family: 'DotGothic16', sans-serif;
+    font-weight: bold;
+    border: 1px black solid;
+    border-radius: 20px;
+    background-color: #FFDE00;
+    margin: 2px 5px;
+    width: 100px;
+    height: 30px;
+    text-decoration: none;
+    box-shadow: 0 3px #7e7014;
+    :hover{
+        background-color: #f6eca9;
+        border: none;
+    }
+    :active{
+        background-color: #FFDE00;
+        box-shadow: 0 3px #7e7014;
+        transform: translateY(4px);
+    }
+`; 

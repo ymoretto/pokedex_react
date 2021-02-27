@@ -43,7 +43,7 @@ const App = () => {
         <Navbar />
         <Container className="mt-5 pt-5">
           <Row>
-            <Col>
+            <Col className="d-flex justify-content-center">
               <form onSubmit={handleSubmit}>
                 <input 
                   type="text"
