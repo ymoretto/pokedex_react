@@ -11,7 +11,7 @@ import ImageBox from '../ImageBox';
 
 import LeftPanelStyle from './styles';
 
-const LeftPanel = ({pokemonData}) => {
+const LeftPanel = ({pokemonData, pokemonFront, pokemonBack, pokemonShiny}) => {
     return (
         <LeftPanelStyle>
             <Container>
@@ -41,6 +41,9 @@ const LeftPanel = ({pokemonData}) => {
                 <Row className="mb-2 mt-2">
                     <ImageBox 
                         pokemonData={pokemonData}
+                        pokemonFront={pokemonFront}
+                        pokemonBack={pokemonBack}
+                        pokemonShiny={pokemonShiny}
                     />
                 </Row>
             </Container>

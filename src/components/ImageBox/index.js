@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {ImageBoxStyle, ButtonStyle} from './styles';
 
 import pokeball from '../../img/pokeball.svg';
@@ -9,17 +9,22 @@ import {
     Col
     } from 'react-bootstrap';
 
-const ImageBox = ({pokemonData}) => {
+const ImageBox = ({pokemonData, pokemonFront, pokemonBack, pokemonShiny}) => {
+
+    const [pokeImg, setPokeImg] = useState([pokemonFront]);
 
 
     const handleClickShiny = () => {
-        console.log("Shiny!");
+        setPokeImg([pokemonShiny])
+        console.log(pokemonShiny);
     }
     const handleClickFront = () => {
-        console.log("Front!");
+        setPokeImg([pokemonFront])
+        console.log(pokemonFront);
     }
     const handleClickBack = () => {
-        console.log("Back!");
+        setPokeImg([pokemonBack])
+        console.log(pokemonBack);
     }
 
     return (
@@ -27,11 +32,11 @@ const ImageBox = ({pokemonData}) => {
             <Row>
                 <Col>
                     <ImageBoxStyle>
-                        {pokemonData !== '' 
-                            ? <img src={pokemonData.sprites.front_default} alt="pokemon"/>
-                            : <div>
+                        {pokemonData == '' 
+                            ? <div>
                                 <img src={pokeball} alt="pokeball"/>
-                            </div>    
+                            </div>
+                            : <img src={[pokeImg]} alt="pokemon"/>  
                         }
                     </ImageBoxStyle>
                 </Col>

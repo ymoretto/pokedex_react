@@ -15,6 +15,9 @@ const App = () => {
   const [pokemon, setPokemon] = useState('');
   const [pokemonData, setPokemonData] = useState([]);
   const [pokemonType, setPokemonType] = useState('');
+  const [pokemonFront, setPokemonFront] = useState([]);
+  const [pokemonBack, setPokemonBack] = useState([]);
+  const [pokemonShiny, setPokemonShiny] = useState([]);
 
   const handleChange = (e) => {
     setPokemon(e.target.value.toLowerCase());
@@ -32,6 +35,9 @@ const App = () => {
         dataArray.push(res.data);
         setPokemonType(res.data.types[0].type.name)
         setPokemonData(dataArray[0]);
+        setPokemonFront(res.data.sprites.front_default);
+        setPokemonBack(res.data.sprites.back_default);
+        setPokemonShiny(res.data.sprites.front_shiny);
       })
       .catch((error) => {
         console.log(error);
@@ -59,6 +65,9 @@ const App = () => {
                 pokemon={pokemon}
                 pokemonData={pokemonData}
                 pokemonType={pokemonType}
+                pokemonFront={pokemonFront}
+                pokemonBack={pokemonBack}
+                pokemonShiny={pokemonShiny}
               />
             </Col>
           </Row>
