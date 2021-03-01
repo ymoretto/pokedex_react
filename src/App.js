@@ -10,6 +10,8 @@ Col
 import Navbar from './components/Navbar';
 import Pokedex from './components/Pokedex';
 
+import pokeball from './img/pokeball.svg';
+
 const App = () => {
 
   const [pokemon, setPokemon] = useState('');
@@ -18,6 +20,7 @@ const App = () => {
   const [pokemonFront, setPokemonFront] = useState([]);
   const [pokemonBack, setPokemonBack] = useState([]);
   const [pokemonShiny, setPokemonShiny] = useState([]);
+  const [pokemonImg, setPokemonImg] = useState(pokeball);
 
   const handleChange = (e) => {
     setPokemon(e.target.value.toLowerCase());
@@ -38,6 +41,7 @@ const App = () => {
         setPokemonFront(res.data.sprites.front_default);
         setPokemonBack(res.data.sprites.back_default);
         setPokemonShiny(res.data.sprites.front_shiny);
+        setPokemonImg(res.data.sprites.front_default);
       })
       .catch((error) => {
         console.log(error);
@@ -68,6 +72,7 @@ const App = () => {
                 pokemonFront={pokemonFront}
                 pokemonBack={pokemonBack}
                 pokemonShiny={pokemonShiny}
+                pokemonImg={pokemonImg}
               />
             </Col>
           </Row>

@@ -6,7 +6,7 @@ import LeftPanel from '../LeftPanel';
 import RightPanel from '../RightPanel';
 import Divider from '../Divider';
 
-const Pokedex = ({pokemon, pokemonData, pokemonType, pokemonFront, pokemonBack, pokemonShiny}) => {
+const Pokedex = ({pokemon, pokemonData, pokemonType, pokemonFront, pokemonBack, pokemonShiny, pokemonImg}) => {
 
     return (
         
@@ -16,6 +16,7 @@ const Pokedex = ({pokemon, pokemonData, pokemonType, pokemonFront, pokemonBack, 
                 pokemonFront={pokemonFront}
                 pokemonBack={pokemonBack}
                 pokemonShiny={pokemonShiny}
+                pokemonImg={pokemonImg}
              />
              <Divider />
              <RightPanel 

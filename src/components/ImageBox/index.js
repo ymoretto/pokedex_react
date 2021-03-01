@@ -9,9 +9,11 @@ import {
     Col
     } from 'react-bootstrap';
 
-const ImageBox = ({pokemonData, pokemonFront, pokemonBack, pokemonShiny}) => {
+const ImageBox = ({pokemonData, pokemonFront, pokemonBack, pokemonShiny, pokemonImg}) => {
 
-    const [pokeImg, setPokeImg] = useState([pokemonData.sprites.front_default]);
+
+
+    const [pokeImg, setPokeImg] = useState(pokemonFront);
 
 
     const handleClickShiny = () => {
@@ -32,7 +34,7 @@ const ImageBox = ({pokemonData, pokemonFront, pokemonBack, pokemonShiny}) => {
             <Row>
                 <Col>
                     <ImageBoxStyle>
-                        {pokemonFront == '' 
+                        {pokemonData == '' 
                             ? <div>
                                 <img src={pokeball} alt="pokeball"/>
                             </div>
